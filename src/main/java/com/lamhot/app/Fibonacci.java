@@ -3,9 +3,14 @@ package com.lamhot.app;
 public class Fibonacci {
 	
 	
-	public int fib(int N) {
+	public int fib(int n) {
+		if (n < 0)
+        {
+            throw new IllegalArgumentException("n must be >= 0");
+        }
+		
 		int curr = 0, next = 1;
-		while (N-- > 0) {
+		while (n-- > 0) {
 			next = next + curr;
 			curr = next - curr;
 		}
