@@ -21,44 +21,7 @@ public class FibonacciTest {
 		assertEquals(expectedResult, fibonacci.fib(input));
 	}
 
-	public void testFib1() {
-		assertEquals(1, fibonacci.fib(1));
-	}
 
-	@Test
-	public void testFib2() {
-		assertEquals(1, fibonacci.fib(2));
-	}
 
-	@Test
-	public void testFib3() {
-		assertEquals(2, fibonacci.fib(3));
-	}
-
-	@Test
-	public void testFib30() {
-		assertEquals(832040, fibonacci.fib(30));
-	}
-
-	@Test
-	public void testNol() {
-		assertEquals(0, fibonacci.fib(0));
-	}
-
-	@Test
-	public void testFibMinusOne() {
-		boolean caught = false;
-		try {
-			fibonacci.fib(Integer.MIN_VALUE);
-		} catch (IllegalArgumentException e) {
-			caught = true;
-		}
-		assertTrue(caught);
-	}
-
-	@Test
-	public void testMaxVal() {
-		assertEquals(-1070270179, fibonacci.fib(Integer.MAX_VALUE));
-	}
 
 }
