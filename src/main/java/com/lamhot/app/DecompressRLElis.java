@@ -1,6 +1,6 @@
 package com.lamhot.app;
 
-import java.util.Arrays;
+
 
 public class DecompressRLElis {
 
@@ -17,7 +17,6 @@ public class DecompressRLElis {
 		int counter = 0;
 		for (int i = 0; i < nums.length; i++) {
 			if (i % 2 == 0) {
-				System.out.println("i.." + i);
 				for (int j = 0; j < nums[i]; j++) {
 					result[counter++] = nums[i + 1];
 
