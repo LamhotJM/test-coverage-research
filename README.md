@@ -9,3 +9,4 @@ Implement simple coverage testing using Jacoco & integrated with Circle CI
 
 
 ## Analyzing
+ - mvn clean verify sonar:sonar
