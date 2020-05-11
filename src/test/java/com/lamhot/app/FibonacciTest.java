@@ -21,7 +21,16 @@ public class FibonacciTest {
 		assertEquals(expectedResult, fibonacci.fib(input));
 	}
 
-
+	@Test
+	public void testFibMinusOne() {
+		boolean caught = false;
+		try {
+			fibonacci.fib(Integer.MIN_VALUE);
+		} catch (IllegalArgumentException e) {
+			caught = true;
+		}
+		assertTrue(caught);
+	}
 
 
 }
