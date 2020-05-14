@@ -6,7 +6,6 @@ public class Prob1108_Defanging_An_IP_Address {
 
 		StringBuffer temp = new StringBuffer();
 		for (char addr : address.toCharArray()) {
-
 			if (addr == '.') {
 				temp.append("[.]");
 			} else {
