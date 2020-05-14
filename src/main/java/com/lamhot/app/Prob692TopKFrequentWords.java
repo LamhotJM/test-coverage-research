@@ -1,5 +1,6 @@
 package com.lamhot.app;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -9,15 +10,17 @@ public class Prob692TopKFrequentWords {
 
 	public List<String> topKFrequent(String[] words, int k) {
 
-		TreeMap<String, Integer> hp = new TreeMap<String, Integer>();
+		Map<String, Integer> wordsMapped = new TreeMap<>();
+        for (String word : words) {
+            wordsMapped.put(word, wordsMapped.getOrDefault(word, 0) + 1);
+        }
 
-		for (String word : words) {
-			hp.put(word, hp.getOrDefault((word), 0) + 1);
-		}
-
-		List<String> values = hp.entrySet().stream().sorted((Map.Entry.<String, Integer>comparingByValue().reversed()))
-				.map(Map.Entry::getKey).limit(k).collect(Collectors.toList());
-		return values;
+        return wordsMapped.entrySet()
+                .stream()
+                .sorted(Comparator.comparingInt(entry -> - 1 * entry.getValue()))
+                .limit(k)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
 
 	}
 
