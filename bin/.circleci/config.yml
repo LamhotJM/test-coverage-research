@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/openjdk:14-jdk-buster
+      - circleci/openjdk:14-jdk-buster
     steps:
       - checkout
       - run : mvn test
