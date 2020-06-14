@@ -1,8 +1,7 @@
 package com.lamhot.app;
 
-import static org.junit.Assert.*;
-
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,27 +19,34 @@ public class ReverseTest {
 	}
 
 	@Test
-	public void test1() {
-		String expect = "";
-		String result = ob.reverseString("");
-		assertEquals(expect, result);
-
+	public void reverseEmptyString() {
+		Assert.assertEquals("", ob.reverse(""));
 	}
 
 	@Test
-	public void test2() {
-		String expect = null;
-		String result = ob.reverseString(null);
-		assertEquals(expect, result);
-
+	public void reverseString() {
+		Assert.assertEquals("cba", ob.reverse("abc"));
 	}
 
 	@Test
-	public void test3() {
-		String expect = "tohmal";
-		String result = ob.reverseString("lamhot");
-		assertEquals(expect, result);
-
+	public void reverseNullString() {
+		Assert.assertEquals(null, ob.reverse(null));
 	}
+
+	@Test
+	public void reversePalindromeString() {
+		Assert.assertEquals("aba", ob.reverse("aba"));
+	}
+
+	@Test
+	public void reverseSameCharacterString() {
+		Assert.assertEquals("aaa", ob.reverse("aaa"));
+	}
+
+	@Test
+	public void reverseAnagramString() {
+		Assert.assertEquals("mary", ob.reverse("yram"));
+	}
+
 
 }

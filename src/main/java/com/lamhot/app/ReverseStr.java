@@ -2,7 +2,28 @@ package com.lamhot.app;
 
 public class ReverseStr {
 
-	public String reverseString(String input) {
+	public String reverse(String input) {
+		if (input == null || input.length() <= 0)
+			return input;
+		char[] cr = input.toCharArray();
+		int i = 0;
+		int j = input.length() - 1;
+		while (i < j) {
+			swap(cr, i, j);
+			i++;
+			j--;
+		}
+		return new String(cr);
+	}
+
+	public static void swap(char[] a, int i, int j) {
+		char temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
+
+	}
+
+	public String reverseString2(String input) {
 		if (input == null || input.length() <= 0)
 			return input;
 		StringBuilder sb = new StringBuilder();
