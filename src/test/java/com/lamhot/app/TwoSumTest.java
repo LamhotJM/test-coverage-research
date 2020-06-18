@@ -34,5 +34,20 @@ public class TwoSumTest {
 		int [] expect = {15,13};
 		Assert.assertArrayEquals(expect,ts.twoSum(input, 28) );
 	}
+	
+	@Test
+	public void testNotMatch() {
+		int [] input =  {1,2,5,3};
+		int [] expect = {};
+		Assert.assertArrayEquals(expect,ts.twoSum(input, 28) );
+	}
+	
+	@Test
+	public void test23() {
+		int [] input =  {1,2,5,3};
+		int [] expect = {2,3};
+		Assert.assertArrayEquals(expect,ts.twoSum(input, 5) );
+	}
+
 
 }
