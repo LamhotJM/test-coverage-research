@@ -10,10 +10,10 @@ import org.junit.Test;
 public class TwoSumTest {
 
 	
-	TwoSum ts;
+	NotSum ts;
 	@Before
 	public void setUp() throws Exception {
-		ts = new TwoSum();
+		ts = new NotSum();
 	}
 
 	@After
