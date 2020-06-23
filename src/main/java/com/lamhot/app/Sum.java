@@ -2,7 +2,7 @@ package com.lamhot.app;
 
 import java.util.HashMap;
 
-public class TwoSum {
+public class Sum {
 
 	public int[] twoSum(int[] input, int sum) {
 		// o(n)
@@ -56,5 +56,9 @@ public class TwoSum {
 		return new int[] {};
 
 	}
+	
+
+	
 
 }
+
