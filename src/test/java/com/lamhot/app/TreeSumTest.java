@@ -41,7 +41,7 @@ public class TreeSumTest {
 
 //	System.out.println("debug" + Arrays.toString(ts.treeSum(input,10)));
 
-		Assert.assertArrayEquals(expect, ts.treeSum(input, 10));
+		assertArrayEquals(expect, ts.treeSum(input, 10));
 
 	}
 
@@ -51,7 +51,7 @@ public class TreeSumTest {
 		int[] expect = {};
 		int[] input = { 2, 3, 4, 5, 6, 7 };
 
-		Assert.assertArrayEquals(expect, ts.treeSum(input, 100));
+		assertArrayEquals(expect, ts.treeSum(input, 100));
 
 	}
 
