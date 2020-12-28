@@ -22,7 +22,7 @@ public class DecompressRLElisTest {
 	public void test1()
 	{
 		int [] arr = {1,2,3,4};
-		int [] expected= {2,4,4,4};
+		int [] expected= {2,4,4,2};
 		Assert.assertArrayEquals(expected, d.decompressRLElist(arr));
 		
 	}
