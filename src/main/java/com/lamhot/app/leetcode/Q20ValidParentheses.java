@@ -13,7 +13,7 @@ public class Q20ValidParentheses {
 	}
 
 	public boolean isValid(String s) {
-		if (s == null || s.length() <= 0 || s.length() % 2 != 0) {
+		if (s.length() % 2 != 0) {
 			return false;
 		}
 
@@ -22,15 +22,16 @@ public class Q20ValidParentheses {
 		for (char c : s.toCharArray()) {
 			if (c == '[' || c == '(' || c == '{') {
 				x.push(c);
-			} else if (c == ']' && !s.isEmpty() && x.peek() == '[')
+			} else if (c == ']' && !x.isEmpty() && x.peek() == '[') {
 				x.pop();
-			else if (c == ')' && !s.isEmpty() && x.peek() == '(')
+			} else if (c == ')' && !x.isEmpty() && x.peek() == '(') {
 				x.pop();
-			else if (c == '}' && !s.isEmpty() && x.peek() == '{') {
+			} else if (c == '}' && !x.isEmpty() && x.peek() == '{') {
 				x.pop();
+			} else {
+				return false;
 			}
 
-			
 		}
 		return x.isEmpty();
 	}
