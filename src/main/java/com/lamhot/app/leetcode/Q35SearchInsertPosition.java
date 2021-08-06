@@ -11,7 +11,7 @@ public class Q35SearchInsertPosition {
 	}
 
 	public int searchInsert(int[] nums, int target) {
-		if(nums.length<=0)
+		if(nums.length<=0 || nums==null)
 		{
 			return -1;
 		}
