@@ -1,7 +1,5 @@
 package com.lamhot.app.leetcode;
 
-import java.util.*;
-
 class MinMaxMatrix {
     public static void main(String[] args) {
         int[][] data = {
