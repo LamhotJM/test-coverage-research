@@ -4,11 +4,12 @@ public class Palindrom {
 
 	public static void main(String[] args) {
 		System.out.println("A man, a plan, a canal: Panama. : " + isPalindrome("A man, a plan, a canal: Panama"));
+		System.out.println("racecar " + isPalindrome("racecar"));
 	}
 
-	public static boolean isPalindrome(String s) {
+	public static boolean isPalindrome(String s1) {
 
-		String s1 = s.replaceAll("[^0-9a-zA-Z]", "").toLowerCase();
+//		String s1 = s.replaceAll("[^0-9a-zA-Z]", "").toLowerCase();
 		char ch1;
 		char ch2;
 		for (int i = 0; i < s1.length() / 2; i++) {

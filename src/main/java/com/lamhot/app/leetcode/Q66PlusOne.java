@@ -13,34 +13,19 @@ public class Q66PlusOne {
 	}
 
 	public int[] plusOne(int[] digits) {
-//		if (digits == null || digits.length <= 0) {
-//			return null;
-//		}
-//		int length = digits.length;
-//		int arr[] = new int[length];
-//		for (int i = 0; i < length; i++) {
-//			if (i == length - 1) {
-//
-//				arr[i] = digits[i] + 1;
-//			} else {
-//				arr[i] = digits[i];
-//			}
-//
-//		}
-//		return arr;
-		
+		if (digits == null || digits.length <= 0) {
+			return null;
+		}
 		int n = digits.length;
-		for(int i=n-1; i>=0; i--)
-		{
-			if(digits[i]<9)
-			{
-				digits[i]=+1;
+		for (int i = n - 1; i >= 0; i--) {
+			if (digits[i] < 9) {
+				digits[i] ++;
 				return digits;
 			}
-			digits[i]=0;
+			digits[i] = 0;
 		}
-		int [] new_number = new int[n+1];
-		new_number[0]=1;
+		int[] new_number = new int[n + 1];
+		new_number[0] = 1;
 		return new_number;
 
 	}
