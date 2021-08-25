@@ -6,8 +6,8 @@ public class Q172FactorialTrailingZeroes {
 
 		Q172FactorialTrailingZeroes ob = new Q172FactorialTrailingZeroes();
 		System.out.println(ob.trailingZeroes(7));
-		System.out.println(ob.trailingZeroes(6));
-		System.out.println(ob.trailingZeroes(5));
+		//System.out.println(ob.trailingZeroes(6));
+		//System.out.println(ob.trailingZeroes(5));
 
 	}
 
