@@ -5,7 +5,7 @@ import java.util.Set;
 
 import com.lamhot.app.common.ListNode;
 
-public class Q2_83RemoveDuplicatesfromSortedList {
+public class Q2_142LinkedListCycleII {
 
 	/*
 	 * 142. Linked List Cycle II

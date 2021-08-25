@@ -7,6 +7,9 @@ import com.lamhot.app.leetcode.ListNode;
 class Q1_141LinkedListCycle {
 
 	/**
+	 * 
+	 * 141. Linked List Cycle
+	 * 
 	 * The following methods, i.e:
 	 *
 	 * 1. public int whereCycle(ListNode head) 2. public boolean hasCycle(ListNode
