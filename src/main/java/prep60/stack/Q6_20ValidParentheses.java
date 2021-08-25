@@ -40,7 +40,7 @@ public class Q6_20ValidParentheses {
 				return false;
 			}
 
-			Stack<Character> x = new Stack();
+			Stack<Character> x = new Stack<Character>();
 
 			for (char c : s.toCharArray()) {
 				if (c == '[' || c == '(' || c == '{') {
