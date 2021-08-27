@@ -5,8 +5,8 @@ import java.util.List;
 
 // Definition for singly-linked list.
 public class ListNode {
-	int val;
-	ListNode next;
+	public int val;
+	public ListNode next;
 	
 	@Override
 	public String toString()
