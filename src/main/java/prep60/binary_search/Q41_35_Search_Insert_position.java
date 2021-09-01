@@ -42,28 +42,21 @@ public class Q41_35_Search_Insert_position {
 	
 	
 	public int searchInsert(int[] nums, int target) {
-        if(nums.length<=0 || nums==null)
-		{
-			return -1;
+		return bs(nums, 0, nums.length - 1, target);
+	}
+
+	private int bs(int[] nums, int start, int end, int target) {
+		if (start > end) {
+			return end + 1;
 		}
-
-		int low = 0;
-		int high = nums.length - 1;
-		int mid;
-		while (low <= high) {
-
-			mid = low + (high - low) / 2;
-
-			if (nums[mid] == target) {
-				return mid;
-			} else if (nums[mid] < target) {
-				low = mid + 1;
-			} else {
-				high = mid - 1;
-			}
+		int mid = (start + end) / 2;
+		if (nums[mid] < target) {
+			return bs(nums, mid + 1, end, target);
 		}
-
-		return low;
-    }
+		if (nums[mid] > target) {
+			return bs(nums, start, mid - 1, target);
+		}
+		return mid;
+	}
 
 }
