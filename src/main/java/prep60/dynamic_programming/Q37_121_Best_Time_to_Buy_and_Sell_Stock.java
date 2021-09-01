@@ -31,5 +31,19 @@ public class Q37_121_Best_Time_to_Buy_and_Sell_Stock {
 		0 <= prices[i] <= 104
 
 	 */
+	
+	public int maxProfit(int[] prices) {
+		if (prices == null || prices.length <= 1)
+			return 0;
+
+		int maxProfit = 0;
+		int leftMin = Integer.MAX_VALUE;
+		for (int price : prices) {
+			maxProfit = Math.max(maxProfit, price - leftMin);
+			leftMin = Math.min(leftMin, price);
+		}
+
+		return maxProfit;
+	}
 
 }
