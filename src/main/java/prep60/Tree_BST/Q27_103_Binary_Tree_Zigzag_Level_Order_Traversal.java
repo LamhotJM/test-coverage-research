@@ -55,87 +55,91 @@ public class Q27_103_Binary_Tree_Zigzag_Level_Order_Traversal {
 	The number of nodes in the tree is in the range [0, 2000].
 	-100 <= Node.val <= 100
 	 */
-	
+
 	// Approach Queue
-	
+
 	public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-		 List<List<Integer>> result = new ArrayList<List<Integer>>();
-	    if (root == null) return result;
+		List<List<Integer>> result = new ArrayList<List<Integer>>();
+		if (root == null)
+			return result;
 
-	    boolean odd = true;
-	    Queue<TreeNode> q = new LinkedList<TreeNode>();
-	    q.offer(root);
-	    while (!q.isEmpty()) {
-	      ArrayList<Integer> level = new ArrayList<Integer>();
-	      for (int i = 0; i < q.size(); i++) {
-	        TreeNode node = q.poll();
-	        level.add(node.val);
-	        if (node.left != null) q.offer(node.left);
-	        if (node.right != null) q.offer(node.right);
-	      }
+		boolean odd = true;
+		Queue<TreeNode> q = new LinkedList<TreeNode>();
+		q.offer(root);
+		while (!q.isEmpty()) {
+			ArrayList<Integer> level = new ArrayList<Integer>();
+			for (int i = 0; i < q.size(); i++) {
+				TreeNode node = q.poll();
+				level.add(node.val);
+				if (node.left != null)
+					q.offer(node.left);
+				if (node.right != null)
+					q.offer(node.right);
+			}
 
-	      if (odd) {
-	        result.add(level);
-	      } else {
-	        Collections.reverse(level);
-	        result.add(level);
-	      }
+			if (odd) {
+				result.add(level);
+			} else {
+				Collections.reverse(level);
+				result.add(level);
+			}
 
-	      odd = !odd;
-	    }
+			odd = !odd;
+		}
 
-	    return result;
-	  }
-	
+		return result;
+	}
+
 	// Approach DFS (Depth-First Search)
 
 	public List<List<Integer>> zigzagLevelOrder2(TreeNode root) {
-	    if (root == null) {
-	      return new ArrayList<List<Integer>>();
-	    }
-
-	    List<List<Integer>> results = new ArrayList<List<Integer>>();
-	    DFS(root, 0, results);
-	    return results;
-	  }
-
-	  private void DFS(TreeNode node, int level, List<List<Integer>> results) {
-	    if (level >= results.size()) {
-	      LinkedList<Integer> newLevel = new LinkedList<Integer>();
-	      newLevel.add(node.val);
-	      results.add(newLevel);
-	    } else {
-	      if (level % 2 == 0) {
-	        results.get(level).add(node.val);
-	      } else {
-	        results.get(level).add(0, node.val);
-	      }
-
-	      if (node.left != null)         DFS(node.left, level + 1, results);
-	      if (node.right != null)     DFS(node.right, level + 1, results);
-	    }
-	  }
-	  
-
-		public static void main(String[] args) {
-
-			Q27_103_Binary_Tree_Zigzag_Level_Order_Traversal ob = new Q27_103_Binary_Tree_Zigzag_Level_Order_Traversal();
-
-			BinarySearchTree bst = new BinarySearchTree();
-			TreeNode root = new TreeNode(30);
-			bst.insert(root, 20);
-			bst.insert(root, 25);
-			bst.insert(root, 15);
-			bst.insert(root, 50);
-			bst.insert(root, 40);
-			bst.insert(root, 60);
-			bst.insert(root, 70);
-
-			BTreePrinter.printNode(root);
-
-			System.out.println(ob.zigzagLevelOrder(root));
-
+		if (root == null) {
+			return new ArrayList<List<Integer>>();
 		}
+
+		List<List<Integer>> results = new ArrayList<List<Integer>>();
+		DFS(root, 0, results);
+		return results;
+	}
+
+	private void DFS(TreeNode node, int level, List<List<Integer>> results) {
+		if (level >= results.size()) {
+			LinkedList<Integer> newLevel = new LinkedList<Integer>();
+			newLevel.add(node.val);
+			results.add(newLevel);
+		} else {
+			if (level % 2 == 0) {
+				results.get(level).add(node.val);
+			} else {
+				results.get(level).add(0, node.val);
+			}
+
+			if (node.left != null)
+				DFS(node.left, level + 1, results);
+			if (node.right != null)
+				DFS(node.right, level + 1, results);
+		}
+	}
+
+	public static void main(String[] args) {
+
+		Q27_103_Binary_Tree_Zigzag_Level_Order_Traversal ob = new Q27_103_Binary_Tree_Zigzag_Level_Order_Traversal();
+
+		BinarySearchTree bst = new BinarySearchTree();
+		TreeNode root = new TreeNode(30);
+		bst.insert(root, 20);
+		bst.insert(root, 25);
+		bst.insert(root, 15);
+		bst.insert(root, 50);
+		bst.insert(root, 40);
+		bst.insert(root, 60);
+		bst.insert(root, 70);
+
+		BTreePrinter.printNode(root);
+
+		System.out.println(ob.zigzagLevelOrder(root));
+
+	}
 
 
 }
