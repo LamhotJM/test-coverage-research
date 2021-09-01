@@ -60,7 +60,7 @@ public class Q21_104_Maximum_Depth_of_Binary_Tree {
 	        node2.right = new TreeNode(4);
 	        
 	        Q21_104_Maximum_Depth_of_Binary_Tree ob = new Q21_104_Maximum_Depth_of_Binary_Tree();
-	        System.out.println(node1.toString());
+	       System.out.println(node1.toString());
 	       System.out.println(ob.maxDepth(node1));
 	       
 	       
@@ -78,26 +78,12 @@ public class Q21_104_Maximum_Depth_of_Binary_Tree {
 
 			int depth = ob.maxDepth(root);
 			for (int i = 0; i < depth; i++) {
-				PrintLevelNodes(root, i);
+				TreeNode.PrintLevelNodes(root, i);
 				System.out.println();
 			}
 	      
 	    }
-	 
-	 public static void PrintLevelNodes(TreeNode root, int level) {
-			if (level == 0) {
-				System.out.print(root.val + " ");
-				return;
-			}
-
-			if (root.left != null) {
-				PrintLevelNodes(root.left, level - 1);
-			}
-
-			if (root.right != null) {
-				PrintLevelNodes(root.right, level - 1);
-			}
-		}
+	
 
 	 //(1) DFS
 	 public int maxDepth(TreeNode root) {
