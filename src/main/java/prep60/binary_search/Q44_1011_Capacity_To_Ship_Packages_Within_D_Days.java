@@ -47,5 +47,40 @@ public class Q44_1011_Capacity_To_Ship_Packages_Within_D_Days {
 	1 <= days <= weights.length <= 5 * 104
 	1 <= weights[i] <= 500
 	 */
+	
+	public int shipWithinDays(int[] weights, int D) {
+		if (weights == null || weights.length == 0) {
+			return 0;
+		}
+
+		int l = 0;
+		int r = 0;
+		for (int w : weights) {
+			l = Math.max(l, w);
+			r += w;
+		}
+
+		while (l < r) {
+			int mid = l + (r - l) / 2;
+			int count = 1;
+			int sum = 0;
+			for (int w : weights) {
+				if (sum + w > mid) {
+					count++;
+					sum = 0;
+				}
+
+				sum += w;
+			}
+
+			if (count > D) {
+				l = mid + 1;
+			} else {
+				r = mid;
+			}
+		}
+
+		return l;
+	}
 
 }
