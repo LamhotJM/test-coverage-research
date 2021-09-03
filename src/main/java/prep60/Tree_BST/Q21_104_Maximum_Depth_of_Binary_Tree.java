@@ -55,8 +55,7 @@ public class Q21_104_Maximum_Depth_of_Binary_Tree {
 	        TreeNode node3 = new TreeNode(8);
 	        TreeNode node4 = new TreeNode(0);
 	        node1.left = node2;
-	        node1.right = node3;
-	        node2.left = node4;
+	        node1.right = node3; 
 	        node2.right = new TreeNode(4);
 	        
 	        Q21_104_Maximum_Depth_of_Binary_Tree ob = new Q21_104_Maximum_Depth_of_Binary_Tree();
