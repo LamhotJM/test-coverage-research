@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 import com.lamhot.app.leetcode.ListNode;
 
-class Q1_141LinkedListCycle {
+class Q1_141_Linked_List_Cycle {
 
 	/**
 	 * 

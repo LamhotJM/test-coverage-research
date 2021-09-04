@@ -55,8 +55,7 @@ public class Q21_104_Maximum_Depth_of_Binary_Tree {
 	        TreeNode node3 = new TreeNode(8);
 	        TreeNode node4 = new TreeNode(0);
 	        node1.left = node2;
-	        node1.right = node3;
-	        node2.left = node4;
+	        node1.right = node3; 
 	        node2.right = new TreeNode(4);
 	        
 	        Q21_104_Maximum_Depth_of_Binary_Tree ob = new Q21_104_Maximum_Depth_of_Binary_Tree();
@@ -64,23 +63,23 @@ public class Q21_104_Maximum_Depth_of_Binary_Tree {
 	       System.out.println(ob.maxDepth(node1));
 	       
 	       
-	       BinarySearchTree bst = new BinarySearchTree();
-			TreeNode root = new TreeNode(30);
-			bst.insert(root, 20);
-			bst.insert(root, 25);
-			bst.insert(root, 15);
-			bst.insert(root, 50);
-			bst.insert(root, 40);
-			bst.insert(root, 60);
-			bst.insert(root, 70);
-
-			BTreePrinter.printNode(root);
-
-			int depth = ob.maxDepth(root);
-			for (int i = 0; i < depth; i++) {
-				TreeNode.PrintLevelNodes(root, i);
-				System.out.println();
-			}
+//	       BinarySearchTree bst = new BinarySearchTree();
+//			TreeNode root = new TreeNode(30);
+//			bst.insert(root, 20);
+//			bst.insert(root, 25);
+//			bst.insert(root, 15);
+//			bst.insert(root, 50);
+//			bst.insert(root, 40);
+//			bst.insert(root, 60);
+//			bst.insert(root, 70);
+//
+//			BTreePrinter.printNode(root);
+//
+//			int depth = ob.maxDepth(root);
+//			for (int i = 0; i < depth; i++) {
+//				TreeNode.PrintLevelNodes(root, i);
+//				System.out.println();
+//			}
 	      
 	    }
 	
