@@ -30,19 +30,19 @@ public class Q51_78_Subsets {
 	 */
 	
 	public List<List<Integer>> subsets(int[] nums) {
-        List<List<Integer>> ans = new ArrayList<>();
-        helper(ans, new ArrayList<Integer>(), nums, 0);
-        return ans;
-    }
+		List<List<Integer>> ans = new ArrayList<>();
+		helper(ans, new ArrayList<Integer>(), nums, 0);
+		return ans;
+	}
 
-    public void helper(List<List<Integer>> ans, List<Integer> comb, int[] nums, int start){
-        ans.add(new ArrayList<>(comb));
-        for(int i = start; i < nums.length; i++){
-            comb.add(nums[i]);
-            helper(ans, comb, nums, i + 1);
-            comb.remove(comb.size() - 1);
-        }
-        return;
-    }
+	public void helper(List<List<Integer>> ans, List<Integer> comb, int[] nums, int start) {
+		ans.add(new ArrayList<>(comb));
+		for (int i = start; i < nums.length; i++) {
+			comb.add(nums[i]);
+			helper(ans, comb, nums, i + 1);
+			comb.remove(comb.size() - 1);
+		}
+		return;
+	}
 
 }

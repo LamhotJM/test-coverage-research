@@ -27,29 +27,29 @@ public class Q54_283_Move_Zeroes {
 
 	 */
 	
-	 public void moveZeroes(int[] nums) {
-	        if (nums == null || nums.length == 0) {
-	            return;
-	        }
+	public void moveZeroes(int[] nums) {
+		if (nums == null || nums.length == 0) {
+			return;
+		}
 
-	        int nonZeroIndex = 0;
+		int nonZeroIndex = 0;
 
-	        for (int i = 0; i < nums.length; i++) {
-	            if (nums[i] != 0) {
-	                swap(nums, nonZeroIndex, i);
-	                ++nonZeroIndex;
-	            }
-	        }
-	    }
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] != 0) {
+				swap(nums, nonZeroIndex, i);
+				++nonZeroIndex;
+			}
+		}
+	}
 
-	    public void swap(int[] nums, int index1, int index2) {
-	        if (index1 == index2) {
-	            return;
-	        }
+	public void swap(int[] nums, int index1, int index2) {
+		if (index1 == index2) {
+			return;
+		}
 
-	        int temp = nums[index1];
-	        nums[index1] = nums[index2];
-	        nums[index2] = temp;
-	    }
+		int temp = nums[index1];
+		nums[index1] = nums[index2];
+		nums[index2] = temp;
+	}
 
 }
