@@ -48,7 +48,6 @@ public class Q11_1TwoSum {
 			}
 		}
 		return new int[] { 0, 0 };
-		// return null;
 	}
 
 }
