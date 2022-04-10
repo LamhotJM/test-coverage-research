@@ -6,7 +6,7 @@ public class Q28ImplementstrStr {
 		Q28ImplementstrStr obj = new Q28ImplementstrStr();
 
 		System.out.println(obj.strStr("hello", "llu"));
- //	System.out.println(obj.strStr("", ""));
+		// System.out.println(obj.strStr("", ""));
 
 	}
 
