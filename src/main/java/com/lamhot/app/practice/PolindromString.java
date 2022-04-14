@@ -3,10 +3,10 @@ package com.lamhot.app.practice;
 public class PolindromString {
 
 	public static void main(String[] argrs) {
-		String sample = "lamhot";
+		String sample = "Lamhot";
 
 		PolindromString ob = new PolindromString();
-		System.out.print(ob.polindrom(sample));
+		System.out.print(ob.prolindrom2(sample));
 	}
 
 	private Boolean polindrom(String input) {
@@ -21,6 +21,22 @@ public class PolindromString {
 		result = sb.toString();
 		return input.equals(result);
 
+	}
+	
+	public Boolean prolindrom2(String input)
+	{
+		int i =0;
+		int j = input.length()-1;
+		while(i < j)
+		{
+			if(input.charAt(i)!=input.charAt(j))
+			{
+				return false;
+			}
+			i++;
+			j--;
+		}
+		return true;
 	}
 
 }
