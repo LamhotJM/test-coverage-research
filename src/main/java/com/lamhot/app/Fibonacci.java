@@ -1,6 +1,12 @@
 package com.lamhot.app;
 
 public class Fibonacci {
+	public static void main(String args[])
+	{
+		Fibonacci ob = new Fibonacci();
+		System.out.println(ob.fib(10));
+		
+	}
 	
 	
 	public int fib(int n) {
