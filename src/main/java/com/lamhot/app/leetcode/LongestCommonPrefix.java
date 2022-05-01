@@ -1,11 +1,11 @@
 package com.lamhot.app.leetcode;
 
 public class LongestCommonPrefix {
-
-	public static void main(String[] args) {
+	//public static void main(String args[])
+	public static void main(String args[]) {
 		//TODO Auto-generated method stub
 	    //longestCommonPrefix();
-		String[] input = {"rflower","flow", "flight"}; 
+		String[] input = {"flower","flow", "flight"}; 
 		LongestCommonPrefix fx = new LongestCommonPrefix();
 		System.out.println(fx.longestCommonPrefix(input));
 
@@ -13,25 +13,26 @@ public class LongestCommonPrefix {
 	
 	public String longestCommonPrefix(String[] str)
 	{
-		String longestCommonPrefix="";
+		//String longestCommonPrefix="";
+		StringBuilder longestCommonPrefix = new StringBuilder();
 		if(str==null || str.length<0)
 		{
-			return longestCommonPrefix;
+			return longestCommonPrefix.toString();
 		}
-		int index =0;
+		int index =0; //
 		for(Character c: str[0].toCharArray())
 		{
 			for(int i =1; i<str.length;i++)
 			{
 				if(index>= str[i].length()|| c!=str[i].charAt(index))
 				{
-					return longestCommonPrefix;
+					return longestCommonPrefix.toString();
 				}
 			}
-			longestCommonPrefix +=c;
+			longestCommonPrefix.append(c);
 			index ++;
 		}
-		return longestCommonPrefix;
+		return longestCommonPrefix.toString();
 		
 	}
 	
