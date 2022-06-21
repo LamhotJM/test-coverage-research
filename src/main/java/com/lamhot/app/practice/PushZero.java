@@ -10,16 +10,32 @@ public class PushZero {
 		System.out.println(Arrays.toString(ob.moved(arr)));
 	}
 
-	private int[] moved(int input[]) {
-		int temp [] = new int [input.length];
-		int count=0;
+	private int[] moved2(int input[]) {
+		int temp[] = new int[input.length];
+		int count = 0;
 		for (int i = 0; i < input.length; i++) {
 			if (input[i] != 0) {
-				temp[count++]=input[i];
+				temp[count++] = input[i];
 			}
-	
+
 		}
 		return temp;
+
+	}
+
+	private int[] moved(int input[]) {
+		int count = 0;
+		for (int i = 0; i < input.length; i++) {
+			if (input[i] != 0) {
+				input[count++] = input[i];
+			}
+
+		}
+
+		while (count < input.length)
+			input[count++] = 0;
+
+		return input;
 
 	}
 
