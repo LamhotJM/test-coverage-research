@@ -96,18 +96,12 @@ class Q1_141_Linked_List_Cycle {
 	 * 
 	 */
 
-	// return the index of the start of the cycle in the linked list
-	// return -1 if no cycle exists
 	public int whereCycle(ListNode head) {
 
 		if (head == null)
 			return -1;
 
-		// Do Not assume unique node values of `val`
 		HashMap<ListNode, Integer> track = new HashMap<ListNode, Integer>();
-		// keys as ListNode objects
-		// values as indices starting from zero
-
 		ListNode curr = head;
 
 		int index = 0;
@@ -123,16 +117,11 @@ class Q1_141_Linked_List_Cycle {
 				return curr.val;
 			}
 			curr = curr.next;
-
 		}
 		return -1;
 	}
 
 	// return true if the linked list contains a cycle
-	public boolean hasCycle(ListNode head) {
-
-		boolean result = whereCycle(head) == -1 ? false : true;
-		return result;
-	}
+	
 
 }
