@@ -2,9 +2,8 @@ package com.lamhot.app.leetcode;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map.Entry;
-import java.util.function.Consumer;
-import java.util.stream.Stream;
+//import java.util.Map.Entry;
+//import java.util.function.Consumer;
 
 public class TwoSum {
 
@@ -32,12 +31,12 @@ public class TwoSum {
 		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 		for (int i = 0; i < nums.length; i++) {
 			if (map.containsKey(nums[i])) {
-				map.entrySet().forEach(new Consumer<Entry<Integer, Integer>>() {
-					@Override
-					public void accept(Entry<Integer, Integer> entry) {
-						System.out.println(entry.getKey() + " " + entry.getValue());
-					}
-				});
+//				map.entrySet().forEach(new Consumer<Entry<Integer, Integer>>() {
+//					@Override
+//					public void accept(Entry<Integer, Integer> entry) {
+//						System.out.println(entry.getKey() + " " + entry.getValue());
+//					}
+//				});
 				return new int[] { (map.get(nums[i])), i };
 			} else
 				map.put(target - nums[i], i);
