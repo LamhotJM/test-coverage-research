@@ -53,25 +53,25 @@ public class Q10_373FindKPairswithSmallestSums {
 	 * 39.6 MB, less than 80.78% of Java online submissions.
 	 */
 	public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
-		PriorityQueue<int[]> que = new PriorityQueue<>(new Comparator<int[]>() {
-			@Override
-			public int compare(int[] a, int[] b) {
-				return a[0] + a[1] - b[0] - b[1];
-			}
-		});
+//		PriorityQueue<int[]> que = new PriorityQueue<>(new Comparator<int[]>() {
+//			@Override
+//			public int compare(int[] a, int[] b) {
+//				return a[0] + a[1] - b[0] - b[1];
+//			}
+//		});
 		List<List<Integer>> res = new ArrayList<>();
-		if (nums1.length == 0 || nums2.length == 0 || k == 0)
-			return res;
-		for (int i = 0; i < nums1.length && i < k; i++)
-			que.offer(new int[] { nums1[i], nums2[0], 0 });
-		while (k-- > 0 && !que.isEmpty()) {
-			int[] cur = que.poll();
-			addToList(res, cur[0], cur[1]);
-
-			if (cur[2] == nums2.length - 1)
-				continue;
-			que.offer(new int[] { cur[0], nums2[cur[2] + 1], cur[2] + 1 });
-		}
+//		if (nums1.length == 0 || nums2.length == 0 || k == 0)
+//			return res;
+//		for (int i = 0; i < nums1.length && i < k; i++)
+//			que.offer(new int[] { nums1[i], nums2[0], 0 });
+//		while (k-- > 0 && !que.isEmpty()) {
+//			int[] cur = que.poll();
+//			addToList(res, cur[0], cur[1]);
+//
+//			if (cur[2] == nums2.length - 1)
+//				continue;
+//			que.offer(new int[] { cur[0], nums2[cur[2] + 1], cur[2] + 1 });
+//		}
 		return res;
 	}
 

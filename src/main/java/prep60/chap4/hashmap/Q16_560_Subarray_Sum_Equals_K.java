@@ -45,7 +45,7 @@ public class Q16_560_Subarray_Sum_Equals_K {
 			if (preSum.containsKey(search)) {
 				result += preSum.get(sum - k);
 			}
-			preSum.put(sum, preSum.getOrDefault(sum, 0) + 1);
+			//preSum.put(sum, preSum.getOrDefault(sum, 0) + 1);
 		}
 
 		System.out.println(preSum);
